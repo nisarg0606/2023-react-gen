@@ -9,13 +9,14 @@ export const ListUser = () => {
     
 
   const getUserDetail = async () => {
-    const res = await axios.get("http://localhost:3001/user/user");
+    const res = await axios.get("https://node5.onrender.com/user/user/");
+    console.log(res);
     setusers(res.data.data);
   };
 
   const deleteUser = async (id) => {
 
-    const res = await axios.delete("http://localhost:3001/user/user/"+id)
+    const res = await axios.delete("https://node5.onrender.com/user/user/"+id)
     console.log(res)
     if(res.status===204){
         toast.success("record deleted....", {

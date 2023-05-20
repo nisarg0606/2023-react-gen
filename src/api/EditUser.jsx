@@ -14,7 +14,7 @@ export const EditUser = () => {
     formState: { errors },
   } = useForm({
     defaultValues: async ()=>{
-        const res = await axios.get("http://localhost:3001/user/user/"+id)
+        const res = await axios.get("https://node5.onrender.com/user/user/"+id)
         console.log(res.data.data)
         return(
             {
